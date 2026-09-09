@@ -15,7 +15,7 @@ function carregarMenu() {
             }
 
             // Seleciona todos os links do menu dentro da estrutura de lista
-            const links = document.querySelectorAll('header nav ul li a');
+            const links = document.querySelectorAll('header nav a');
 
             // Passa por cada link para ver se o arquivo destino coincide com a página atual
             links.forEach(link => {

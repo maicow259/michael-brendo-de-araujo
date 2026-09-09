@@ -481,3 +481,122 @@ main {
     font-size: 1rem;
     box-sizing: border-box;
 }
+
+/* --- PÁGINA DE CONTATO --- */
+
+.container-contato {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-contato h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estrutura do Formulário Centrado */
+.formulario-contato {
+    max-width: 600px; /* Largura perfeita para não esticar demais no PC */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Blocos de Campos (Labels e Inputs) */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-campo label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Inputs e Textarea Estilizados com as variáveis do tema */
+.grupo-campo input,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid var(--borda-cor);
+    border-radius: 6px;
+    background-color: var(--fundo-header);
+    color: var(--cor-texto);
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: border-color 0.2s;
+}
+
+.grupo-campo textarea {
+    resize: vertical; /* Permite esticar o campo apenas para baixo */
+}
+
+/* Remove contornos feios ao focar e usa o destaque do hover */
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: var(--cor-texto-hover);
+}
+
+/* Caixa de Feedback (Erro ou Sucesso) */
+.mensagem-feedback {
+    display: none; /* Oculta por padrão */
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+}
+
+/* Classes controladas pelo JavaScript */
+.mensagem-feedback.visivel {
+    display: block; /* Faz aparecer na tela */
+}
+
+.mensagem-feedback.erro {
+    background-color: #fce8e6;
+    border-color: #ea4335;
+    color: #c5221f;
+}
+
+.mensagem-feedback.sucesso {
+    background-color: #e6f4ea;
+    border-color: #34a853;
+    color: #137333;
+}
+
+/* Ajuste automático para o feedback combinar com o Dark Mode */
+:root.dark .mensagem-feedback.erro {
+    background-color: #2c1514;
+    color: #f28b82;
+}
+:root.dark .mensagem-feedback.sucesso {
+    background-color: #0f2416;
+    color: #81c995;
+}
+
+/* Botão de Enviar (Usa o mesmo estilo primário do portfólio) */
+.botao-enviar {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid var(--borda-cor);
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--ativo-cor-botao);
+    color: var(--ativo-texto-botao);
+    transition: 0.2s;
+}
+
+.botao-enviar:hover {
+    background-color: var(--fundo-pagina);
+    color: var(--cor-texto);
+}
+

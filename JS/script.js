@@ -1,6 +1,6 @@
 // Função que vai manter o menu em todas as páginas
 function carregarMenu() {
-    fetch("../docs/menu.html") // Busca o arquivo do menu
+    fetch("menu.html") // Busca o arquivo do menu
         .then(resposta => resposta.text()) // Transforma o arquivo em texto
         .then(htmlDoMenu => {
             // Coloca esse texto dentro da div container

@@ -184,3 +184,44 @@ header nav a.ativo {
 .perfil-hobbies li {
     font-weight: 500;
 }
+
+/* --- ESTILOS EXCLUSIVOS PARA TELAS DE CELULAR --- */
+@media (max-width: 600px) {
+    
+    /* 1. Diminui o espaçamento de segurança do topo do site no celular */
+    body {
+        padding-top: 260px; /* Reduz para o conteúdo não ficar muito longe */
+    }
+
+    /* 2. Ajusta o tamanho do cabeçalho geral */
+    header {
+        padding: 20px 10px; /* Diminui o espaço interno para sobrar tela */
+    }
+
+    /* 3. Diminui a fonte do título principal para caber em menos linhas */
+    header h1 {
+        font-size: 1.8rem; /* Fonte compacta e elegante para celular */
+        margin-bottom: 15px;
+    }
+
+    /* 4. Ajusta a barra de botões para caber perfeitamente de um lado ao outro */
+    header nav ul {
+        gap: 8px; /* Reduz drasticamente o espaço de 30px para 8px entre os botões */
+        flex-wrap: wrap; /* Caso a tela seja muito fina, os botões quebram linha sem sumir */
+    }
+
+    /* 5. Diminui o tamanho e o espaçamento interno de cada botão individual */
+    header nav a {
+        padding: 6px 10px; /* Botões um pouco menores e mais fáceis de encaixar */
+        font-size: 0.9rem; /* Diminui ligeiramente o texto do botão */
+    }
+
+    /* 6. Reposiciona o botão do tema para não cobrir o texto */
+    #botao-tema {
+        top: 15px;
+        right: 15px; /* Deixa ele mais coladinho no canto superior direito */
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}

@@ -8,6 +8,11 @@
     --cor-texto-hover: #f5f5f5;
     --ativo-cor-botao: #1e1e1e;
     --ativo-texto-botao: #f5f5f5;
+    /* Variáveis de Destaque Colorido Modo Claro */
+    --cor-faixa-verde: #0d5c46;
+    --cor-card-roxo: #4b369d;
+    --cor-badge-marrom: #7a2a16;
+    --texto-coloridos: #FFFFFF;
 }
 
 /* Quando a página tiver no tema dark*/
@@ -20,6 +25,13 @@
     --cor-texto-hover: #1e1e1e;
     --ativo-cor-botao: #f5f5f5;
     --ativo-texto-botao: #1e1e1e;
+
+    /* Variáveis de Destaque Colorido Modo Escuro */
+    /* Tons ligeiramente mais escuros ou opacos para não agredir os olhos no escuro */
+    --cor-faixa-verde: #083b2d;
+    --cor-card-roxo: #2d1f66;
+    --cor-badge-marrom: #4e190d;
+    --texto-coloridos: #F5F5F5;
 }
 
 body {
@@ -336,4 +348,136 @@ main {
 .botao-projeto.primary:hover {
     background-color: var(--fundo-pagina);
     color: var(--cor-texto);
+}
+
+/* --- PÁGINA DE FORMAÇÃO --- */
+
+.container-formacao {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaço saudável entre as seções */
+}
+
+.secao-formacao h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Divisórias de Títulos do Wireframe */
+.divisoria-titulo {
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 2px solid var(--borda-cor);
+}
+
+/* Corrigido para H2: Herda a cor adaptável clara ou escura */
+.divisoria-titulo h2 { 
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--texto-coloridos); 
+}
+
+/* Uso correto das variáveis do tema */
+.divisoria-titulo.verde { background-color: var(--cor-faixa-verde); }
+.divisoria-titulo.marrom { background-color: var(--cor-badge-marrom); }
+
+/* Camada 1: Card Principal (Estilo do projeto único) */
+.card-formacao-principal {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid var(--borda-cor);
+    border-radius: 12px;
+    padding: 30px;
+    background-color: var(--fundo-header);
+    text-align: center;
+    box-sizing: border-box;
+}
+.card-formacao-principal h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+.card-formacao-principal .instituicao {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    opacity: 0.9;
+}
+.card-formacao-principal .status-ano {
+    font-size: 0.95rem;
+    font-weight: bold;
+    opacity: 0.75;
+}
+
+/* Camada 2: Grid de Certificações */
+.grid-certificacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card-certificacao {
+    border: 2px solid var(--borda-cor);
+    border-radius: 12px;
+    padding: 20px;
+    background-color: var(--cor-card-roxo); /* Usando variável dinâmica */
+    color: var(--texto-coloridos);
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.2s;
+}
+.card-certificacao:hover {
+    transform: scale(1.03);
+}
+
+/* Corrigido para H3: Mantém o título do curso harmonioso no grid */
+.card-certificacao h3 { 
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+}
+.card-certificacao p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+/* Camada 3: Idiomas (Flexbox) */
+.lista-idiomas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.badge-idioma {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px; /* Bordas totalmente ovais igual ao desenho */
+    border: 2px solid var(--borda-cor);
+    background-color: var(--cor-badge-marrom); /* Usando variável dinâmica */
+    color: var(--texto-coloridos);
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* Barra Opcional de Habilidades */
+.barra-habilidades {
+    width: 100%;
+    padding: 15px;
+    border-radius: 6px;
+    border: 2px solid var(--borda-cor);
+    background-color: var(--fundo-header);
+    text-align: center;
+    font-size: 1rem;
+    box-sizing: border-box;
 }

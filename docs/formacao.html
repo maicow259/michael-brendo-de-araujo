@@ -2,23 +2,82 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Garante o design responsivo, fazendo o site se ajustar ao tamanho da tela do celular/monitor -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formação</title>
-
-    <!-- Lê a preferência do usuário e aplica o tema escuro antes da página carregar, evitando o piscar branco na tela -->
+    <title>Formação - Meu Portfólio</title>
     <script>if(localStorage.getItem('tema')==='dark')document.documentElement.classList.add('dark');</script>
-
-    <!-- Vincula o arquivo CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
-    <!-- Div vazia que serve como espaço reservado onde o JavaScript injetará o menu -->
     <div id="menu-container"></div>
 
-    <!-- Carrega e executa a lógica em JavaScript, responsável por puxar o menu e gerenciar a troca de temas -->
+    <main class="container-formacao">
+        
+        <!-- CAMADA 1: Formação Principal (Destaque) -->
+        <section class="secao-formacao">
+            <h2>Formação Acadêmica</h2>
+            <article class="card-formacao-principal">
+                <h3>Tecnologia em Jogos Digitais</h3>
+                <p class="instituicao">UNINTER · Graduação EAD</p>
+                <span class="status-ano">Cursando · Desde 2023</span>
+            </article>
+        </section>
+
+        <!-- CAMADA 2: Cursos e Certificações (Grid Completo Corrigido) -->
+        <section class="secao-formacao">
+            <div class="divisoria-titulo verde">
+                <h2>Cursos e Certificações</h2>
+            </div>
+            
+            <div class="grid-certificacoes">
+                <article class="card-certificacao">
+                    <h3>IT Essentials</h3>
+                    <p>CISCO · 2017</p>
+                </article>
+                <article class="card-certificacao">
+                    <h3>Projetista CAD</h3>
+                    <p>Micropro · 2020</p>
+                </article>
+                <article class="card-certificacao">
+                    <h3>Eletricista Manut.</h3>
+                    <p>SENAI · 2015</p>
+                </article>
+                <article class="card-certificacao">
+                    <h3>CCNA Routing</h3>
+                    <p>CISCO · 2017</p>
+                </article>
+                <article class="card-certificacao">
+                    <h3>Competência TIC</h3>
+                    <p>SENAI · 2014</p>
+                </article>
+                <article class="card-certificacao">
+                    <h3>+ mais cursos...</h3>
+                    <p>Em expansão</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CAMADA 3: Idiomas (Badges Flexbox Corrigidos) -->
+        <section class="secao-formacao">
+            <div class="divisoria-titulo marrom">
+                <h2>Idiomas</h2>
+            </div>
+            
+            <ul class="lista-idiomas">
+                <li class="badge-idioma">Inglês — Avançado</li>
+                <li class="badge-idioma">Japonês — Básico</li>
+            </ul>
+        </section>
+
+        <!-- Habilidades Técnicas -->
+        <section class="secao-formacao">
+            <div class="barra-habilidades">
+                <strong>Habilidades técnicas:</strong> C#, Unity, HTML, CSS, JS, Python, Git...
+            </div>
+        </section>
+
+    </main>
+
     <script src="JS/script.js"></script>
-</body>    
+</body>
 </html>

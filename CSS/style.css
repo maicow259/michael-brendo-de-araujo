@@ -1,0 +1,109 @@
+/* Variáveis*/
+:root {
+    --fundo-pagina: #FFFFFF;
+    --fundo-header: #F5F5F5;
+    --cor-texto: #1E1E1E;
+    --borda-cor: #1E1E1E;
+    --fundo-hover: #1E1E1E;
+    --cor-texto-hover: #f5f5f5;
+    --ativo-cor-botao: #1e1e1e;
+    --ativo-texto-botao: #f5f5f5;
+}
+
+/* Quando a página tiver no tema dark*/
+:root.dark {
+    --fundo-pagina: #121212;
+    --fundo-header: #1E1E1E;
+    --cor-texto: #F5F5F5;
+    --borda-cor: #F5F5F5;
+    --fundo-hover: #f5f5f5;
+    --cor-texto-hover: #1e1e1e;
+    --ativo-cor-botao: #f5f5f5;
+    --ativo-texto-botao: #1e1e1e;
+}
+
+body {
+    margin: 0; /* reseta a margin do navegador para 0*/
+    padding: 0; /* reseta o padding do navegador para 0*/
+    padding-top: 202px; /* Adiciona um espaço entre o menu, já que o menu vai ser fixo na tela */
+    background-color: var(--fundo-pagina);
+    color: var(--cor-texto);
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s; /* Deixa a transição de cor suave */
+}
+
+header {
+    background-color: var(--fundo-header); /* Define a cor de fundo */
+    color: var(--cor-texto); /* Muda a cor do texto dentro do header  */
+    text-align: center;  /* Centraliza o nome e os links no meio da tela */
+    padding: 40px 20px;  /* Dá 40px de espaço em cima/baixo e 20px nas laterais */
+    border-bottom: 2px solid var(--borda-cor); /* Coloca uma borda no final do menu */
+    /* Força o menu a ficar fixo no topo da tela */
+    position: fixed;   
+    top: 0;            
+    left: 0;           
+    width: 100%;       
+    z-index: 1000; /* Garente que o menu fique na frente de qualquer elemento*/ 
+    box-sizing: border-box; /* Garante que o padding e a borda não aumentem o tamanho total do menu, evitando que ele passe da largura da tela */
+}
+
+header h1 {
+    margin: 0 0 15px 0; /* Zera as margens e deixa só 15px de espaço abaixo do título */
+    font-size: 3.5rem; /* Deixa o tamanho da fonte grande e destacado */
+    font-family: sans-serif; /* Muda a font */
+}
+
+header nav ul {
+    display: flex;  /* Ativa o Flexbox para alinhar os itens lado a lado */
+    justify-content: center; /* Centraliza horizontalmente os botões no meio da barra */
+    list-style: none; /* Remove o comportamento padrão de estilos da lista */
+    padding: 0; /* Remove o recuo padrão que a lista tem na esquerda */
+    margin: 0;  /* Remove margens padrão */
+    gap: 30px;  /* Cria um espaço de 30px entre os botoes */
+}
+
+header nav a {
+    color: var(--cor-texto); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-family: sans-serif;  /* Muda a fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    display: inline-block; /* Permite aplicar espaçamento interno (padding) no link */
+    padding: 8px 16px; /* Cria o espaço interno do botão (8px cima/baixo, 16px lados) */
+    border-radius: 4px; /* Deixa as bordinhas do botão levemente arredondadas */
+    transition: 0.3s; /* Deixa a mudança de cor suave */
+    border: 2px solid var(--borda-cor); /* Coloca uma borda nos botoes */
+
+}
+
+header nav a:hover {
+    color: var(--cor-texto-hover); /* Muda a cor do link quando o mouse passa em cima */
+    background: var(--fundo-hover); /* Muda a cor do fundo para dar contraste */
+}
+
+/* Configuração do estilo dos botoes do menu quando ele é a pagina ativa */
+header nav a.ativo {
+    background-color: var(--ativo-cor-botao);
+    color: var(--ativo-texto-botao);            
+}
+
+/* Estilo do Botão de Alternar Tema */
+#botao-tema {
+    position: absolute;
+    top: 20px;
+    right: 60px; /* Alinha o botão no canto direito do menu */
+    background: transparent;
+    border: 2px solid var(--borda-cor);
+    border-radius: 50%; /* Deixa o botão totalmente redondo */
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+#botao-tema:hover {
+    transform: scale(1.1); /* Dá um leve zoom ao passar o mouse */
+}

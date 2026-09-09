@@ -48,9 +48,10 @@ header {
 }
 
 header h1 {
-    margin: 0 0 15px 0; /* Zera as margens e deixa só 15px de espaço abaixo do título */
-    font-size: 3.5rem; /* Deixa o tamanho da fonte grande e destacado */
+    margin: 0 auto 15px auto;
+    font-size: 2.5rem; /* Deixa o tamanho da fonte grande e destacado */
     font-family: sans-serif; /* Muda a font */
+    max-width: 1000px; /* Limita a largura máxima do título */
 }
 
 header nav ul {
@@ -58,9 +59,10 @@ header nav ul {
     justify-content: center; /* Centraliza horizontalmente os botões no meio da barra */
     list-style: none; /* Remove o comportamento padrão de estilos da lista */
     padding: 0; /* Remove o recuo padrão que a lista tem na esquerda */
-    margin: 0;  /* Remove margens padrão */
+    margin: 0 auto;  /* Remove margens padrão */
     gap: 30px;  /* Cria um espaço de 30px entre os botoes */
     align-items: center; /* Garante que o botão redondo e os botões de texto fiquem perfeitamente alinhados na mesma linha horizontal */
+    max-width: 1000px; /* Limita a largura máxima */
 }
 
 header nav a {
@@ -187,29 +189,30 @@ header nav a.ativo {
 /* --- ESTILOS EXCLUSIVOS PARA TELAS DE CELULAR --- */
 @media (max-width: 600px) {
     
-    /* Diminui o espaçamento de segurança do topo do site no celular */
+    /* 1. Remove o espaçamento fixo do topo. O menu sticky vai se posicionar sozinho naturalmente */
     body {
-        padding-top: 260px; /* Reduz para o conteúdo não ficar muito longe */
+        padding-top: 0; 
     }
 
-    /* Ajusta o tamanho do cabeçalho geral */
+    /* 2. Muda o cabeçalho para sticky. Ele vai ocupar o espaço real e grudar ao rolar, sem flutuar ou cobrir nada */
     header {
+        position: sticky;   /* Muda de fixed para sticky */
         padding: 20px 10px; /* Diminui o espaço interno para sobrar tela */
     }
 
-    /* Diminui a fonte do título principal para caber em menos linhas */
+    /* 3. Diminui a fonte do título principal para caber em menos linhas */
     header h1 {
         font-size: 1.8rem; /* Fonte compacta e elegante para celular */
         margin-bottom: 15px;
     }
 
-    /* Ajusta a barra de botões para caber perfeitamente de um lado ao outro */
+    /* 4. Ajusta a barra de botões para caber perfeitamente de um lado ao outro */
     header nav ul {
         gap: 8px; /* Reduz drasticamente o espaço de 30px para 8px entre os botões */
         flex-wrap: wrap; /* Caso a tela seja muito fina, os botões quebram linha sem sumir */
     }
 
-    /* Diminui o tamanho e o espaçamento interno de cada botão individual */
+    /* 5. Diminui o tamanho e o espaçamento interno de cada botão individual */
     header nav a {
         padding: 6px 10px; /* Botões um pouco menores e mais fáceis de encaixar */
         font-size: 0.9rem; /* Diminui ligeiramente o texto do botão */

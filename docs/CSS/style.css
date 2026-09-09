@@ -218,3 +218,107 @@ header nav a.ativo {
         font-size: 0.9rem; /* Diminui ligeiramente o texto do botão */
     }
 }
+
+/* --- PÁGINA DE PORTFÓLIO --- */
+
+.container-portfolio {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-portfolio h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Card customizado para um projeto exclusivo */
+.card-projeto-unico {
+    max-width: 800px; /* Garante que o card fique largo e imponente no PC */
+    margin: 0 auto;   /* Centraliza o card perfeitamente na tela */
+    border: 2px solid var(--borda-cor);
+    border-radius: 12px; 
+    padding: 25px;    /* Espaço interno ligeiramente maior para dar conforto visual */
+    background-color: var(--fundo-header); 
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.card-projeto-unico:hover {
+    transform: translateY(-3px); /* Leve efeito ao passar o mouse */
+}
+
+/* Imagem de capa expandida */
+.projeto-capa {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--borda-cor);
+}
+
+.projeto-capa img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.projeto-cabecalho {
+    background-color: var(--fundo-pagina); /* Usa a cor de fundo invertida para criar o bloco de destaque */
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid var(--borda-cor); /* Cria uma bordinha sutil ao redor do título e tags */
+}
+
+/* Título e Tags */
+.projeto-cabecalho h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.6rem; /* Título um pouco maior para destacar */
+}
+
+.projeto-tag {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    font-weight: bold;
+}
+
+/* Descrição Curta (Adicionado o texto real do jogo) */
+.projeto-descricao {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Área do Botão Único */
+.projeto-botoes {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.botao-projeto {
+    width: 100%; 
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px; /* Botão mais alto e fácil de clicar, estilo itch.io */
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 2px solid var(--borda-cor);
+    transition: 0.2s;
+}
+
+/* Botão Principal Estilizado com as suas variáveis */
+.botao-projeto.primary {
+    background-color: var(--ativo-cor-botao);
+    color: var(--ativo-texto-botao);
+}
+
+.botao-projeto.primary:hover {
+    background-color: var(--fundo-pagina);
+    color: var(--cor-texto);
+}

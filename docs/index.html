@@ -9,28 +9,28 @@
     
     <title>Sobre - Meu Portfólio</title>
     
-    <!-- ANTI-FLASH SCRIPT: Lê a escolha do usuário no localStorage e aplica o tema escuro antes de renderizar a página, evitando o flash branco na tela -->
+    <!-- Lê a escolha do usuário no localStorage e aplica o tema escuro antes de renderizar a página, evitando o flash branco na tela -->
     <script>if(localStorage.getItem('tema')==='dark')document.documentElement.classList.add('dark');</script>
     
-    <!-- Vínculo com o arquivo CSS central que armazena toda a identidade visual do projeto -->
+    <!-- Vínculo com o arquivo CSS que armazena toda a identidade visual do projeto -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
-    <!-- CONTAINER DO MENU: Espaço reservado onde a função 'carregarMenu' do JavaScript injetará o menu.html -->
+    <!-- Espaço reservado onde a função 'carregarMenu' do JavaScript injetará o menu.html -->
     <div id="menu-container"></div> 
 
-    <!-- CONTEÚDO PRINCIPAL: Seção dedicada à apresentação profissional e pessoal -->
+    <!-- Seção dedicada à apresentação -->
     <main class="container-sobre">
         
-        <!-- BLOCO SUPERIOR: Organização em Flexbox para alinhar foto e texto lado a lado -->
+        <!-- Organização em Flexbox para alinhar foto e texto lado a lado -->
         <div class="perfil-topo">
-            <!-- Lado Esquerdo: Área dedicada à imagem de perfil do profissional -->
+            <!-- Área dedicada à imagem de perfil -->
             <div class="perfil-foto">
                 <img src="Fotos/Foto.png" alt="Foto de Michael Brendo de Araujo">
             </div>
 
-            <!-- Lado Direito: Caixa de texto com títulos de cargo e biografia acadêmica -->
+            <!-- Caixa de texto com títulos de cargo e biografia acadêmica -->
             <div class="perfil-texto">
                 <h2>Michael Brendo de Araujo</h2>
                 <h3>Estudante de Tecnologia em Jogos Digitais</h3>
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <!-- BLOCO INFERIOR: Grid de Hobbies e interesses para humanizar o perfil profissional -->
+        <!-- Grid de Hobbies e interesses -->
         <div class="perfil-hobbies">
             <h3>Hobbies & Interesses</h3>
             <ul>

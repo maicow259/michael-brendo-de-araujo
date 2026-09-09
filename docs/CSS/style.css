@@ -107,3 +107,80 @@ header nav a.ativo {
 #botao-tema:hover {
     transform: scale(1.1); /* Dá um leve zoom ao passar o mouse */
 }
+
+/* Pagina sobre */
+
+/* Container principal que segura todo o conteúdo abaixo do menu */
+.container-sobre {
+    max-width: 1000px; /* Define uma largura máxima elegante para o conteúdo */
+    margin: 0 auto;    /* Centraliza o bloco inteiro no meio da tela */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;         /* Espaçamento vertical entre os blocos */
+}
+
+/* Flexbox para colocar a foto e o texto lado a lado */
+.perfil-topo {
+    display: flex;
+    gap: 40px;         /* Espaço entre a foto e o texto */
+    align-items: center; /* Alinha os dois verticalmente pelo meio */
+    flex-wrap: wrap;   /* Se a tela for pequena (celular), a foto fica em cima e o texto embaixo */
+}
+
+/* Estilização do bloco da foto */
+.perfil-foto {
+    flex: 1;           
+    min-width: 250px;  /* Garante que o bloco não fique espremido */
+    max-width: 300px;  /* Limita o tamanho máximo da foto */
+}
+
+.perfil-foto img {
+    width: 100%;       /* Faz a imagem ocupar todo o espaço do bloco */
+    height: auto;
+    border-radius: 8px; /* Deixa as bordas da foto levemente arredondadas */
+    border: 2px solid var(--borda-cor); /* Usa a sua variável de borda */
+}
+
+/* Estilização do bloco de texto de apresentação */
+.perfil-texto {
+    flex: 2;           /* Faz o texto ocupar mais espaço que a foto */
+    min-width: 300px;
+}
+
+.perfil-texto h2 {
+    margin-top: 0;
+    font-size: 2.2rem;
+}
+
+.perfil-texto h3 {
+    color: var(--cor-texto);
+    opacity: 0.8;      /* Deixa a profissão ligeiramente mais suave */
+    margin-bottom: 20px;
+}
+
+/* Estilização do bloco inferior (Hobbies) */
+.perfil-hobbies {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid var(--borda-cor);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.perfil-hobbies h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.perfil-hobbies ul {
+    list-style: none;  /* Remove as bolinhas padrão */
+    padding: 0;
+    display: grid;     /* Organiza os hobbies em colunas modernas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.perfil-hobbies li {
+    font-weight: 500;
+}

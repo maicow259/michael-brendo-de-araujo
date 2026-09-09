@@ -189,33 +189,48 @@ header nav a.ativo {
 /* --- ESTILOS EXCLUSIVOS PARA TELAS DE CELULAR --- */
 @media (max-width: 600px) {
     
-    /* 1. Remove o espaçamento fixo do topo. O menu sticky vai se posicionar sozinho naturalmente */
+    /* Remove o espaçamento fixo do topo. O menu sticky vai se posicionar sozinho naturalmente */
     body {
         padding-top: 0; 
     }
 
-    /* 2. Muda o cabeçalho para sticky. Ele vai ocupar o espaço real e grudar ao rolar, sem flutuar ou cobrir nada */
+    /* Muda o cabeçalho para sticky. Ele vai ocupar o espaço real e grudar ao rolar, sem flutuar ou cobrir nada */
     header {
         position: sticky;   /* Muda de fixed para sticky */
         padding: 20px 10px; /* Diminui o espaço interno para sobrar tela */
     }
 
-    /* 3. Diminui a fonte do título principal para caber em menos linhas */
+    /* Diminui a fonte do título principal para caber em menos linhas */
     header h1 {
         font-size: 1.8rem; /* Fonte compacta e elegante para celular */
         margin-bottom: 15px;
     }
 
-    /* 4. Ajusta a barra de botões para caber perfeitamente de um lado ao outro */
+    /* Ajusta a barra de botões para caber perfeitamente de um lado ao outro */
     header nav ul {
         gap: 8px; /* Reduz drasticamente o espaço de 30px para 8px entre os botões */
         flex-wrap: wrap; /* Caso a tela seja muito fina, os botões quebram linha sem sumir */
     }
 
-    /* 5. Diminui o tamanho e o espaçamento interno de cada botão individual */
+    /* Diminui o tamanho e o espaçamento interno de cada botão individual */
     header nav a {
         padding: 6px 10px; /* Botões um pouco menores e mais fáceis de encaixar */
         font-size: 0.9rem; /* Diminui ligeiramente o texto do botão */
+    }
+}
+
+#menu-container {
+    order: -1; /* Se o body virar flex, joga o menu para o início de tudo */
+}
+
+main {
+    order: 1;  /* Garante que o conteúdo principal venha depois do menu */
+}
+
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column; /* No celular, força o body a se comportar como uma pilha vertical */
     }
 }
 

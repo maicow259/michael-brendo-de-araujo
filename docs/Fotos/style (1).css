@@ -1,8 +1,8 @@
 /* ==========================================================================
-   VARIÁVEIS DO SISTEMA (CUSTOM PROPERTIES)
+   1. VARIÁVEIS DO SISTEMA (CUSTOM PROPERTIES)
    ========================================================================== */
 :root {
-    /* Paleta do Tema Claro (Modo Claro) */
+    /* Paleta do Tema Claro (Light Mode) */
     --fundo-pagina: #FFFFFF;
     --fundo-header: #F5F5F5;
     --cor-texto: #1E1E1E;
@@ -21,7 +21,7 @@
 
 /* Quando o elemento principal HTML receber a classe .dark via JavaScript */
 :root.dark {
-    /* Paleta do Tema Escuro */
+    /* Paleta do Tema Escuro (Dark Mode) */
     --fundo-pagina: #121212;
     --fundo-header: #1E1E1E;
     --cor-texto: #F5F5F5;
@@ -31,7 +31,7 @@
     --ativo-cor-botao: #f5f5f5;
     --ativo-texto-botao: #1e1e1e;
 
-    /* Variáveis de Destaque Colorido (Modo Escuro) */
+    /* Variáveis de Destaque Colorido (Modo Escuro - Tons mais suaves aos olhos) */
     --cor-faixa-verde: #083b2d;
     --cor-card-roxo: #2d1f66;
     --cor-badge-marrom: #4e190d;
@@ -39,7 +39,7 @@
 }
 
 /* ==========================================================================
-   ESTILOS GERAIS DA PÁGINA (BODY E FLUXO)
+   2. ESTILOS GERAIS DA PÁGINA (BODY E FLUXO)
    ========================================================================== */
 body {
     margin: 0; /* Reseta as margens padrões do navegador */
@@ -51,7 +51,7 @@ body {
     transition: background-color 0.3s, color 0.3s; /* Transição suave e elegante ao alternar o tema */
 }
 
-/* Garante o fluxo correto em estruturas Flexbox */
+/* Forças de Ordem: Garante o fluxo correto em estruturas Flexbox */
 #menu-container {
     order: -1; 
 }
@@ -61,7 +61,7 @@ main {
 }
 
 /* ==========================================================================
-   ARQUITETURA DO CABEÇALHO FIXO
+   3. ARQUITETURA DO CABEÇALHO FIXO (HEADER)
    ========================================================================== */
 header {
     background-color: var(--fundo-header);
@@ -141,7 +141,7 @@ header nav a.ativo {
 }
 
 /* ==========================================================================
-   SOBRE MIM
+   4. LAYOUT DA PÁGINA: SOBRE MIM
    ========================================================================== */
 .container-sobre {
     max-width: 1000px;
@@ -214,7 +214,7 @@ header nav a.ativo {
 }
 
 /* ==========================================================================
-   PORTFÓLIO
+   5. LAYOUT DA PÁGINA: PORTFÓLIO (PROJETO ÚNICO)
    ========================================================================== */
 .container-portfolio {
     max-width: 1000px;
@@ -312,7 +312,7 @@ header nav a.ativo {
 }
 
 /* ==========================================================================
-   FORMAÇÃO ACADÊMICA
+   6. LAYOUT DA PÁGINA: FORMAÇÃO ACADÊMICA
    ========================================================================== */
 .container-formacao {
     max-width: 1000px;
@@ -442,7 +442,7 @@ header nav a.ativo {
 }
 
 /* ==========================================================================
-   CONTATO E VALIDAÇÕES
+   7. LAYOUT DA PÁGINA: CONTATO E VALIDAÇÕES
    ========================================================================== */
 .container-contato {
     max-width: 1000px;
@@ -554,7 +554,7 @@ header nav a.ativo {
 }
 
 /* ==========================================================================
-   COMPACTAÇÃO RESPONSIVA (CELULAR)
+   8. COMPACTAÇÃO RESPONSIVA (MEDIA QUERY CELULAR)
    ========================================================================== */
 @media (max-width: 600px) {
     body {

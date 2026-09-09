@@ -14,31 +14,31 @@
     <main class="container-contato">
         <h2>Entre em Contato</h2>
         
-        <!-- O Formulário Semântico -->
+        <!-- Atributo 'novalidate' impede que o navegador faça a validação nativa feia, deixando o controle total para o JavaScript -->
         <form id="formulario-contato" class="formulario-contato" novalidate>
             
-            <!-- Campo Nome -->
+            <!-- Entrada de dados -->
             <div class="grupo-campo">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
             </div>
 
-            <!-- Campo E-mail -->
+            <!-- Entrada de dados para celulares -->
             <div class="grupo-campo">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" placeholder="nome@exemplo.com">
             </div>
 
-            <!-- Campo Mensagem -->
+            <!-- Entrada de dados: Caixa expansível para textos longos de múltiplas linhas -->
             <div class="grupo-campo">
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..."></textarea>
             </div>
 
-            <!-- Div de Feedback (Invisível por padrão) -->
+            <!-- RETORNO VISUAL (FEEDBACK): Div oculta via CSS que só aparecerá quando o JavaScript injetar classes de Erro ou Sucesso -->
             <div id="mensagem-feedback" class="mensagem-feedback"></div>
 
-            <!-- Botão Submit -->
+            <!-- Disparador de envio controlado pelo escutador do JavaScript -->
             <button type="submit" class="botao-enviar">Enviar mensagem</button>
         </form>
     </main>

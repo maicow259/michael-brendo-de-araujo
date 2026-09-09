@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR"> 
 <head>
+    <!-- Define a codificação padrão de caracteres, permitindo acentos e caracteres especiais -->
     <meta charset="UTF-8">
-    <!-- Garante o design responsivo, fazendo o site se ajustar ao tamanho da tela do celular/monitor -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
     
-    <!-- Lê a preferência do usuário e aplica o tema escuro antes da página carregar, evitando o piscar branco na tela -->
+    <!-- Garante a responsividade mobile, forçando o layout a se adaptar à largura de qualquer tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sobre - Meu Portfólio</title>
+    
+    <!-- ANTI-FLASH SCRIPT: Lê a escolha do usuário no localStorage e aplica o tema escuro antes de renderizar a página, evitando o flash branco na tela -->
     <script>if(localStorage.getItem('tema')==='dark')document.documentElement.classList.add('dark');</script>
     
-    <!-- Vincula o arquivo CSS -->
+    <!-- Vínculo com o arquivo CSS central que armazena toda a identidade visual do projeto -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+
+    <!-- CONTAINER DO MENU: Espaço reservado onde a função 'carregarMenu' do JavaScript injetará o menu.html -->
+    <div id="menu-container"></div> 
+
+    <!-- CONTEÚDO PRINCIPAL: Seção dedicada à apresentação profissional e pessoal -->
     <main class="container-sobre">
-        <!-- Bloco de cima: Foto e Texto lado a lado -->
+        
+        <!-- BLOCO SUPERIOR: Organização em Flexbox para alinhar foto e texto lado a lado -->
         <div class="perfil-topo">
-            <!-- Lado Esquerdo: Foto/Avatar -->
+            <!-- Lado Esquerdo: Área dedicada à imagem de perfil do profissional -->
             <div class="perfil-foto">
                 <img src="Fotos/Foto.png" alt="Foto de Michael Brendo de Araujo">
-                <!-- Dica: Crie uma pasta chamada 'Fotos' dentro de docs para guardar sua imagem -->
             </div>
 
-            <!-- Lado Direito: Texto de apresentação -->
+            <!-- Lado Direito: Caixa de texto com títulos de cargo e biografia acadêmica -->
             <div class="perfil-texto">
                 <h2>Michael Brendo de Araujo</h2>
                 <h3>Estudante de Tecnologia em Jogos Digitais</h3>
@@ -30,7 +38,7 @@
             </div>
         </div>
 
-        <!-- Bloco de baixo: Hobbies e Interesses ocupando a largura total -->
+        <!-- BLOCO INFERIOR: Grid de Hobbies e interesses para humanizar o perfil profissional -->
         <div class="perfil-hobbies">
             <h3>Hobbies & Interesses</h3>
             <ul>
@@ -42,11 +50,7 @@
         </div>
     </main>
 
-    <!-- Div vazia que serve como espaço reservado onde o JavaScript injetará o menu -->
-    <div id="menu-container"></div> 
-
-    <!-- Carrega e executa a lógica em JavaScript, responsável por puxar o menu e gerenciar a troca de temas -->
-    <script src="JS/script.js"></script>
-    
+    <!-- Chamada do script responsável por ativar a dinâmica das páginas, menus e validações -->
+    <script src="JS/script.js"></script> 
 </body>
 </html>

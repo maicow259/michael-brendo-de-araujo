@@ -2,54 +2,44 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Garante o design responsivo, fazendo o site se ajustar ao tamanho da tela do celular/monitor -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-
-    <!-- Lê a preferência do usuário e aplica o tema escuro antes da página carregar, evitando o piscar branco na tela -->
+    <title>Portfólio - Meu Projeto</title>
     <script>if(localStorage.getItem('tema')==='dark')document.documentElement.classList.add('dark');</script>
-
-    <!-- Vincula o arquivo CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
-    <!-- Div vazia que serve como espaço reservado onde o JavaScript injetará o menu -->
     <div id="menu-container"></div>
 
-    <!-- Container principal da vitrine de projetos -->
-    <!-- Container principal focado em um projeto único -->
     <main class="container-portfolio">
         <h2>Meu Projeto</h2>
         
-        <!-- Removido o grid, mantendo apenas o card principal centralizado -->
+        <!-- CARD EXCLUSIVO: Bloco centralizado e largo feito para valorizar um único produto em destaque -->
         <article class="card-projeto-unico">
-            <!-- Bloco 1: Imagem de capa (Estilo Itch.io) -->
+            
+            <!-- Elemento 1: Imagem/Screenshot real de exibição do jogo -->
             <div class="projeto-capa">
-                <img src="Fotos/jogo.png" alt="Screenshot do jogo Building in Mayhem">
-                <!-- Dica: Quando tirar o print do jogo, salve na pasta de fotos e mude o src aqui -->
+                <img src="Fotos/jogo.png" alt="Screenshot de exibição do jogo Building in Mayhem">
             </div>
 
-            <!-- Bloco 2: Título e Tags -->
+            <!-- Elemento 2: Bloco com visual invertido para encapsular título e funções -->
             <div class="projeto-cabecalho">
                 <h3>Building in Mayhem</h3>
                 <span class="projeto-tag">Programador · Game Jam 48h</span>
             </div>
 
-            <!-- Bloco 3: Descrição curta -->
+            <!-- Elemento 3: Parágrafo com a sinopse e detalhes oficiais da jogabilidade -->
             <p class="projeto-descricao">
                 Building in Mayhem é um jogo de construção em 3D com elementos cartunescos. Construa casas em um local sitiado, enquanto corre contra o tempo e se defende de nativos malvados que querem arruinar seu trabalho! Os inimigos não causam dano ao jogador, porém roubam seus recursos! Cuidado!
             </p>
 
-            <!-- Bloco 4: Botão de Ação Único preenchendo a base -->
+            <!-- Elemento 4: Link de redirecionamento externo para a plataforma de publicação -->
             <div class="projeto-botoes">
-                <a href="https://fabiano-silva-barbafire.itch.io/building-in-mayhem" target="_blank" class="botao-projeto primary">Jogar no itch.io</a>
+                <a href="https://itch.io" target="_blank" class="botao-projeto primary">Jogar no itch.io</a>
             </div>
         </article>
     </main>
 
-    <!-- Carrega e executa a lógica em JavaScript, responsável por puxar o menu e gerenciar a troca de temas -->
     <script src="JS/script.js"></script>
-</body>    
+</body>
 </html>
